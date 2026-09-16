@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manas Madaan — Hospitality, Branding & Business Growth</title>
+  <meta name="description" content="Manas Madaan helps hotels, cafés, restaurants, bakeries and F&B brands build stronger identities, smarter concepts and more profitable businesses." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#153f35;
+      --ink-2:#0e2d27;
+      --gold:#b99a62;
+      --cream:#f7f3ea;
+      --paper:#fffdf8;
+      --muted:#69746e;
+      --line:#dedbd2;
+      --white:#ffffff;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--cream);
+      color:var(--ink);
+      font-family:"DM Sans",Arial,sans-serif;
+      line-height:1.6;
+    }
+    a{text-decoration:none;color:inherit}
+    .wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:28px 0;gap:20px;
+    }
+    .logo{font-weight:800;letter-spacing:.12em;font-size:1.25rem}
+    .logo span{color:var(--gold)}
+    .navlinks{display:flex;gap:28px;font-size:.9rem;color:#52625b}
+    .navlinks a:hover{color:var(--ink)}
+    .nav-cta{border:1px solid var(--ink);padding:10px 17px;border-radius:999px;font-size:.88rem;font-weight:700}
+    .hero{padding:72px 0 90px;display:grid;grid-template-columns:1.08fr .92fr;gap:70px;align-items:center}
+    .eyebrow{font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:24px}
+    h1{font-size:clamp(3.2rem,7vw,6.8rem);line-height:.98;letter-spacing:-.065em;margin:0 0 30px;font-weight:700}
+    h1 em{font-family:"Playfair Display",serif;font-weight:500;color:var(--gold);letter-spacing:-.04em}
+    .hero-copy{font-size:1.15rem;color:var(--muted);max-width:610px;margin-bottom:34px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 23px;border-radius:7px;font-weight:700;border:1px solid var(--ink);transition:.2s}
+    .btn-primary{background:var(--ink);color:white}
+    .btn-primary:hover{background:var(--ink-2)}
+    .btn-outline{background:transparent}
+    .btn-outline:hover{background:white}
+    .hero-card{
+      background:var(--ink);color:white;border-radius:18px;padding:34px;
+      min-height:430px;display:flex;flex-direction:column;justify-content:space-between;
+      position:relative;overflow:hidden;
+    }
+    .hero-card:before{content:"";position:absolute;width:250px;height:250px;border:1px solid rgba(255,255,255,.18);border-radius:50%;right:-80px;top:-70px}
+    .hero-card:after{content:"";position:absolute;width:340px;height:340px;border:1px solid rgba(255,255,255,.10);border-radius:50%;right:-125px;top:-115px}
+    .card-label{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:#d7c59f}
+    .hero-card h2{font-size:2.2rem;line-height:1.1;letter-spacing:-.04em;max-width:350px;margin:30px 0}
+    .hero-card p{color:#c5d0ca;max-width:330px}
+    .signature{font-family:"Playfair Display",serif;font-style:italic;color:#d7c59f;font-size:1.7rem}
+    .stats{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:30px 0}
+    .stat strong{display:block;font-size:2rem;letter-spacing:-.05em}
+    .stat span{color:var(--muted);font-size:.88rem}
+    section{padding:100px 0}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:38px}
+    .section-kicker{color:var(--gold);text-transform:uppercase;letter-spacing:.2em;font-weight:700;font-size:.75rem}
+    h2.section-title{font-size:clamp(2.2rem,4vw,4rem);line-height:1.05;letter-spacing:-.055em;margin:10px 0 0;max-width:700px}
+    .section-intro{color:var(--muted);max-width:400px}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .service{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:28px;min-height:235px}
+    .service-number{color:var(--gold);font-weight:700;font-size:.8rem;letter-spacing:.15em}
+    .service h3{font-size:1.35rem;margin:32px 0 12px;letter-spacing:-.03em}
+    .service p{color:var(--muted);font-size:.95rem;margin:0}
+    .dark-section{background:var(--ink);color:white}
+    .dark-section .section-intro{color:#c5d0ca}
+    .dark-section .section-kicker{color:#d7c59f}
+    .process{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#456158;border:1px solid #456158}
+    .step{background:var(--ink);padding:28px;min-height:220px}
+    .step-no{font-size:.8rem;color:#d7c59f;letter-spacing:.15em}
+    .step h3{font-size:1.2rem;margin:35px 0 10px}
+    .step p{font-size:.9rem;color:#c5d0ca;margin:0}
+    .work-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:16px}
+    .work-card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:30px;min-height:250px;display:flex;flex-direction:column;justify-content:space-between}
+    .work-card.large{min-height:330px;background:linear-gradient(145deg,#173f35,#285a4c);color:white;border:none}
+    .work-card .tag{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700}
+    .work-card.large .tag{color:#d7c59f}
+    .work-card h3{font-size:1.65rem;line-height:1.15;letter-spacing:-.04em;margin:20px 0 10px}
+    .work-card p{color:var(--muted);margin:0;max-width:430px}
+    .work-card.large p{color:#d2ded7}
+    .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:start}
+    .about-mark{font-size:clamp(5rem,12vw,10rem);font-weight:800;line-height:.8;letter-spacing:-.1em;color:var(--gold)}
+    .about-copy p{font-size:1.12rem;color:var(--muted);max-width:650px}
+    .pill-list{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+    .pill{border:1px solid var(--line);border-radius:999px;padding:8px 13px;font-size:.82rem;background:var(--paper)}
+    .contact{background:#e9e3d5}
+    .contact-box{display:flex;justify-content:space-between;align-items:center;gap:30px}
+    .contact h2{font-size:clamp(2.2rem,5vw,4.8rem);line-height:1;letter-spacing:-.06em;margin:12px 0 0;max-width:700px}
+    .contact p{color:var(--muted);max-width:520px}
+    footer{padding:28px 0;display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:.85rem}
+    .socials{display:flex;gap:18px}
+    @media(max-width:850px){
+      .navlinks{display:none}
+      .hero{grid-template-columns:1fr;gap:35px;padding-top:45px}
+      .hero-card{min-height:330px}
+      .stats-grid{grid-template-columns:repeat(2,1fr)}
+      .services{grid-template-columns:1fr}
+      .process{grid-template-columns:repeat(2,1fr)}
+      .work-grid{grid-template-columns:1fr}
+      .about{grid-template-columns:1fr;gap:35px}
+      .about-mark{font-size:6rem}
+      .contact-box{display:block}
+      .contact-box .btn{margin-top:22px}
+    }
+    @media(max-width:500px){
+      .wrap{width:min(100% - 28px,1160px)}
+      .nav{padding:20px 0}
+      h1{font-size:3.25rem}
+      .hero-copy{font-size:1rem}
+      section{padding:70px 0}
+      .process{grid-template-columns:1fr}
+      .step{min-height:auto}
+      .stats-grid{gap:18px 10px}
+      .stat strong{font-size:1.65rem}
+      footer{display:block}
+      footer .socials{margin-top:12px}
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap nav">
+    <a class="logo" href="#">MANAS<span>.</span></a>
+    <nav class="navlinks">
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="https://wa.me/919116611199" target="_blank" rel="noopener">Let's talk ↗</a>
+  </header>
+
+  <main>
+    <section class="wrap hero">
+      <div>
+        <div class="eyebrow">Hospitality · Branding · Business</div>
+        <h1>Building brands that <em>taste</em> like success.</h1>
+        <p class="hero-copy">I help hotels, cafés, restaurants, bakeries and F&B brands build stronger identities, smarter concepts and more profitable businesses.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://wa.me/919116611199" target="_blank" rel="noopener">Let's work together →</a>
+          <a class="btn btn-outline" href="#work">Explore my work</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="card-label">A practical partner for F&B brands</div>
+        <div>
+          <h2>Good food deserves a business that works.</h2>
+          <p>From the first idea to the final menu, packaging, marketing and customer experience—every detail should support growth.</p>
+        </div>
+        <div class="signature">Manas Madaan</div>
+      </div>
+    </section>
+
+    <div class="stats">
+      <div class="wrap stats-grid">
+        <div class="stat"><strong>100+</strong><span>HoReCa setups supported</span></div>
+        <div class="stat"><strong>360°</strong><span>Branding to business thinking</span></div>
+        <div class="stat"><strong>F&B</strong><span>Hospitality-focused expertise</span></div>
+        <div class="stat"><strong>Jaipur</strong><span>Working with ambitious brands</span></div>
+      </div>
+    </div>
+
+    <section id="services" class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">What I do</div>
+          <h2 class="section-title">More than a designer. A growth-minded brand partner.</h2>
+        </div>
+        <p class="section-intro">I connect the creative side of a brand with the commercial side—so the work looks good and makes business sense.</p>
+      </div>
+      <div class="services">
+        <article class="service">
+          <div class="service-number">01 / BRAND IDENTITY</div>
+          <h3>Make your brand memorable.</h3>
+          <p>Brand strategy, naming, logos, colours, typography, brand kits and visual systems that create a consistent identity.</p>
+        </article>
+        <article class="service">
+          <div class="service-number">02 / MENU & CONCEPTS</div>
+          <h3>Turn ideas into experiences.</h3>
+          <p>Menu planning, product presentation, concept development, pricing thinking and customer-facing communication.</p>
+        </article>
+        <article class="service">
+          <div class="service-number">03 / MARKETING & PRINT</div>
+          <h3>Make every touchpoint work.</h3>
+          <p>Packaging, labels, stickers, menus, campaigns, social media creatives, signage and promotional material.</p>
+        </article>
+        <article class="service">
+          <div class="service-number">04 / BUSINESS CONSULTING</div>
+          <h3>Find where money is leaking.</h3>
+          <p>Practical support around food cost, menu profitability, customer experience, positioning and business improvement.</p>
+        </article>
+        <article class="service">
+          <div class="service-number">05 / CONTENT & STORYTELLING</div>
+          <h3>Give your brand a voice.</h3>
+          <p>Content ideas, brand storytelling, reels, campaign direction and communication that feels relevant—not generic.</p>
+        </article>
+        <article class="service">
+          <div class="service-number">06 / LAUNCH SUPPORT</div>
+          <h3>Build with clarity from day one.</h3>
+          <p>Support for new cafés, restaurants, bakeries, cloud kitchens and hospitality concepts from planning to launch.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="dark-section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">How I think</div>
+            <h2 class="section-title">A beautiful brand is only the beginning.</h2>
+          </div>
+          <p class="section-intro">The goal is not just attention. The goal is a stronger business, a clearer offer and a better customer experience.</p>
+        </div>
+        <div class="process">
+          <div class="step"><div class="step-no">01</div><h3>Understand</h3><p>Study the concept, audience, competition and the real business problem.</p></div>
+          <div class="step"><div class="step-no">02</div><h3>Position</h3><p>Define what makes the brand relevant, distinctive and worth choosing.</p></div>
+          <div class="step"><div class="step-no">03</div><h3>Build</h3><p>Translate the strategy into design, menus, packaging, content and experiences.</p></div>
+          <div class="step"><div class="step-no">04</div><h3>Improve</h3><p>Keep refining what customers see, feel, buy and come back for.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Selected capabilities</div>
+          <h2 class="section-title">From first impression to repeat business.</h2>
+        </div>
+        <p class="section-intro">A selection of the kind of work I create for hospitality and F&B brands.</p>
+      </div>
+      <div class="work-grid">
+        <article class="work-card large">
+          <div class="tag">Branding systems</div>
+          <div>
+            <h3>Identity, menus, packaging and every little detail in between.</h3>
+            <p>Creating a recognisable visual language that carries from the storefront to the customer's table.</p>
+          </div>
+        </article>
+        <article class="work-card">
+          <div class="tag">Business-focused creativity</div>
+          <div>
+            <h3>Design that supports decisions—not just decoration.</h3>
+            <p>Clear communication, better offers, practical concepts and customer experiences designed with purpose.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="wrap">
+      <div class="about">
+        <div class="about-mark">M.</div>
+        <div class="about-copy">
+          <div class="section-kicker">About Manas</div>
+          <h2 class="section-title">I understand both the plate and the business behind it.</h2>
+          <p>I am a hospitality-focused branding and business consultant, food taster, marketing thinker and content creator. My work sits at the intersection of food, design, customer experience and profitability.</p>
+          <p>Whether you are launching a new concept, refreshing an existing brand or trying to understand why sales and margins are not where they should be, I bring a practical, creative and detail-driven approach.</p>
+          <div class="pill-list">
+            <span class="pill">Hotels</span><span class="pill">Cafés</span><span class="pill">Restaurants</span><span class="pill">Bakeries</span><span class="pill">Cloud Kitchens</span><span class="pill">Rooftops</span><span class="pill">F&B Brands</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="wrap contact-box">
+        <div>
+          <div class="section-kicker">Have a brand in mind?</div>
+          <h2>Let's make it worth talking about.</h2>
+          <p>Tell me what you are building, what is not working, or where you want to go next.</p>
+        </div>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://wa.me/919116611199" target="_blank" rel="noopener">WhatsApp me →</a>
+          <a class="btn btn-outline" href="tel:+919116611199">Call 9116611199</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <div>© 2026 Manas Madaan. All rights reserved.</div>
+    <div class="socials">
+      <a href="https://wa.me/919116611199" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="#contact">Start a conversation</a>
+    </div>
+  </footer>
+</body>
+</html>
